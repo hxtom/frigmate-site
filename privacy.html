@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrigMate Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for FrigMate for iOS.">
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        :root {
+            --bg: #0b0f19;
+            --surface: #111827;
+            --surface-border: #1f293d;
+            --text-primary: #f9fafb;
+            --text-secondary: #9ca3af;
+            --accent: #14b8a6;
+            --code-bg: #030712;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+        header {
+            border-bottom: 1px solid var(--surface-border);
+            position: sticky;
+            top: 0;
+            background: rgba(11, 15, 25, 0.85);
+            backdrop-filter: blur(12px);
+            z-index: 100;
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        .brand img {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        nav a:hover, nav a.active {
+            color: var(--text-primary);
+        }
+        .container {
+            max-width: 800px;
+            margin: 3.5rem auto 5rem;
+            padding: 0 1.5rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 2.5rem;
+        }
+        h2 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #5eead4;
+        }
+        p, ul {
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+        }
+        ul {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        .highlight-card {
+            background: var(--surface);
+            border-left: 4px solid var(--accent);
+            border-radius: 6px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        .highlight-card p {
+            color: var(--text-primary);
+            margin: 0;
+            font-weight: 500;
+        }
+        footer {
+            border-top: 1px solid var(--surface-border);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        footer .links {
+            margin-bottom: 1rem;
+        }
+        footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 0.75rem;
+        }
+        footer a:hover {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="icon.png" alt="FrigMate Icon">
+                <span>FrigMate</span>
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="support.html">Support</a>
+                <a href="privacy.html" class="active">Privacy</a>
+                <a href="https://github.com/hxtom/frigmate-site" target="_blank" rel="noopener">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: November 2026</p>
+
+        <div class="highlight-card">
+            <p>FrigMate is designed with a local-first, zero-tracking architecture. We do not collect, store, sell, or transmit your personal data, kitchen inventory, or photos to our own or third-party advertising servers.</p>
+        </div>
+
+        <h2>1. Information Stored on Your Device</h2>
+        <p>All data you create in FrigMate is stored locally on your iPhone:</p>
+        <ul>
+            <li><strong>Inventory &amp; Shopping Lists:</strong> Item names, quantities, units, storage locations, expiration dates, activity logs, and shopping list items are stored locally in private application storage on your device.</li>
+            <li><strong>Food Photos:</strong> Photos taken with the camera or selected from your library are saved solely within your device's local application sandbox (<code>Application Support/RefrigeratorPhotos</code>).</li>
+            <li><strong>NFC Tag Payloads:</strong> When you scan or write an NFC tag, the item name, quantity, and location are read from or written directly to your physical NFC tag using Apple's Core NFC framework.</li>
+        </ul>
+
+        <h2>2. On-Device Camera &amp; Vision Processing</h2>
+        <p>FrigMate uses your device's camera solely when you choose to photograph an item for inventory tracking. Image classification, text recognition (OCR), and visual item counting are performed <strong>100% on-device</strong> using Apple's Vision framework. Your photos are never uploaded to any external server for recognition.</p>
+
+        <h2>3. Optional AI Meal Planner &amp; Shopping Assistant</h2>
+        <p>If you choose to use the AI Meal Planner or AI Shopping Assistant:</p>
+        <ul>
+            <li>FrigMate generates a text summary of your non-expired inventory and/or shopping list items on your device.</li>
+            <li>No data is sent to any AI service unless you explicitly tap a button to share the prompt or open a third-party AI assistant (such as ChatGPT, Claude, or Google Gemini).</li>
+            <li>When you open a third-party AI app or website, your interaction is governed by that provider's respective privacy policy.</li>
+        </ul>
+
+        <h2>4. Local Notifications</h2>
+        <p>If you grant notification permissions, FrigMate schedules local expiration alerts directly on your device via iOS <code>UNUserNotificationCenter</code>. No push notification servers or external device tokens are used.</p>
+
+        <h2>5. Analytics, Tracking &amp; Advertising</h2>
+        <p>FrigMate contains <strong>no third-party analytics SDKs, no advertising frameworks, and no telemetry trackers</strong>. We do not track your usage across apps or websites.</p>
+
+        <h2>6. Your Rights &amp; Data Deletion</h2>
+        <p>Because all data is stored locally on your device, you have full control over it at all times. You can delete individual items, clear your shopping list or activity history inside the app, or remove all data permanently by uninstalling FrigMate from your device.</p>
+
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions regarding this Privacy Policy, you may contact us at:</p>
+        <p><strong>Email:</strong> <a href="mailto:hx_tang@hotmail.com" style="color: #5eead4;">hx_tang@hotmail.com</a><br>
+        <strong>GitHub:</strong> <a href="https://github.com/hxtom/frigmate-site" style="color: #5eead4;" target="_blank" rel="noopener">https://github.com/hxtom/frigmate-site</a></p>
+    </main>
+
+    <footer>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support &amp; FAQ</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="https://github.com/hxtom/frigmate-site">GitHub Repository</a>
+        </div>
+        <p>&copy; 2026 FrigMate. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
